@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Downloading & Installing Essentials
-        run: |
+        run: 
           Invoke-WebRequest -Uri "https://gitlab.com/raposabrty/pcrdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
@@ -20,4 +20,3 @@ jobs:
 
       - name: Time Counter
         run: cmd /c loop.bat
-        
