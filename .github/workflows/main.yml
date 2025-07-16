@@ -8,14 +8,13 @@ jobs:
     name: Start Building...
     runs-on: windows-latest
     timeout-minutes: 360
-    
+
     steps:
       - name: Downloading & Installing Essentials
-        run: 
+        run: |
           Invoke-WebRequest -Uri "https://gitlab.com/raposabtry/pcrdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
-          
-           cmd /c Downloads.bat
-   
+          cmd /c Downloads.bat
+
       - name: Show Website
         run: cmd /c show.bat
 
